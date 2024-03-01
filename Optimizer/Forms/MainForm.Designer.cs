@@ -141,6 +141,7 @@ namespace Optimizer
             this.loginVerboseSw = new Optimizer.ToggleCard();
             this.hpetSw = new Optimizer.ToggleCard();
             this.modernAppsTab = new System.Windows.Forms.TabPage();
+            this.scriptsTab = new System.Windows.Forms.TabPage();
             this.btnRestoreUwp = new System.Windows.Forms.Button();
             this.panelUwp = new System.Windows.Forms.Panel();
             this.uninstallModernAppsButton = new System.Windows.Forms.Button();
@@ -465,6 +466,7 @@ namespace Optimizer
             this.windows8Tab.SuspendLayout();
             this.advancedTab.SuspendLayout();
             this.modernAppsTab.SuspendLayout();
+            this.scriptsTab.SuspendLayout();
             this.startupTab.SuspendLayout();
             this.panel3.SuspendLayout();
             this.appsTab.SuspendLayout();
@@ -690,6 +692,7 @@ namespace Optimizer
             this.tabCollection.Controls.Add(this.windows8Tab);
             this.tabCollection.Controls.Add(this.advancedTab);
             this.tabCollection.Controls.Add(this.modernAppsTab);
+            this.tabCollection.Controls.Add(this.scriptsTab);
             this.tabCollection.Controls.Add(this.startupTab);
             this.tabCollection.Controls.Add(this.appsTab);
             this.tabCollection.Controls.Add(this.cleanerTab);
@@ -2109,6 +2112,25 @@ namespace Optimizer
             this.modernAppsTab.Size = new System.Drawing.Size(1914, 1047);
             this.modernAppsTab.TabIndex = 11;
             this.modernAppsTab.Text = "UWP Apps";
+            // 
+            // scriptsTab
+            // 
+            this.scriptsTab.AutoScroll = true;
+            this.scriptsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.scriptsTab.Controls.Add(this.btnRestoreUwp);
+            this.scriptsTab.Controls.Add(this.panelUwp);
+            this.scriptsTab.Controls.Add(this.uninstallModernAppsButton);
+            this.scriptsTab.Controls.Add(this.refreshModernAppsButton);
+            this.scriptsTab.Controls.Add(this.txtModernAppsTitle);
+            this.scriptsTab.Controls.Add(this.chkOnlyRemovable);
+            this.scriptsTab.Controls.Add(this.chkSelectAllModernApps);
+            this.scriptsTab.Location = new System.Drawing.Point(4, 37);
+            this.scriptsTab.Margin = new System.Windows.Forms.Padding(4);
+            this.scriptsTab.Name = "scriptsTab";
+            this.scriptsTab.Padding = new System.Windows.Forms.Padding(4);
+            this.scriptsTab.Size = new System.Drawing.Size(1914, 1047);
+            this.scriptsTab.TabIndex = 11;
+            this.scriptsTab.Text = "Scripts";
             // 
             // btnRestoreUwp
             // 
@@ -6444,6 +6466,8 @@ namespace Optimizer
             this.advancedTab.ResumeLayout(false);
             this.modernAppsTab.ResumeLayout(false);
             this.modernAppsTab.PerformLayout();
+            this.scriptsTab.ResumeLayout(false);
+            this.scriptsTab.PerformLayout();
             this.startupTab.ResumeLayout(false);
             this.startupTab.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -6656,6 +6680,7 @@ namespace Optimizer
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panelList;
         private System.Windows.Forms.TabPage modernAppsTab;
+        private System.Windows.Forms.TabPage scriptsTab;
         private System.Windows.Forms.Label txtModernAppsTitle;
         private System.Windows.Forms.Button uninstallModernAppsButton;
         private System.Windows.Forms.Button refreshModernAppsButton;
