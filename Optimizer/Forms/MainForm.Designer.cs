@@ -2117,13 +2117,6 @@ namespace Optimizer
             // 
             this.scriptsTab.AutoScroll = true;
             this.scriptsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.scriptsTab.Controls.Add(this.btnRestoreUwp);
-            this.scriptsTab.Controls.Add(this.panelUwp);
-            this.scriptsTab.Controls.Add(this.uninstallModernAppsButton);
-            this.scriptsTab.Controls.Add(this.refreshModernAppsButton);
-            this.scriptsTab.Controls.Add(this.txtModernAppsTitle);
-            this.scriptsTab.Controls.Add(this.chkOnlyRemovable);
-            this.scriptsTab.Controls.Add(this.chkSelectAllModernApps);
             this.scriptsTab.Location = new System.Drawing.Point(4, 37);
             this.scriptsTab.Margin = new System.Windows.Forms.Padding(4);
             this.scriptsTab.Name = "scriptsTab";
