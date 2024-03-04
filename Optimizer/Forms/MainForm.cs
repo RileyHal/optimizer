@@ -1914,19 +1914,19 @@ namespace Optimizer {
 
                             switch (x.Group) {
                                 case "SystemTools":
-                                    appCard.Location = new Point(0, groupSystemTools.Controls.Count * (Program.DPI_PREFERENCE / 3));
+                                    appCard.Location = new Point(0, groupSystemTools.Controls.Count * (Program.DPI_PREFERENCE / 6));
                                     groupSystemTools.Controls.Add(appCard);
                                     break;
                                 case "Internet":
-                                    appCard.Location = new Point(0, groupInternet.Controls.Count * (Program.DPI_PREFERENCE / 3));
+                                    appCard.Location = new Point(0, groupInternet.Controls.Count * (Program.DPI_PREFERENCE / 6));
                                     groupInternet.Controls.Add(appCard);
                                     break;
                                 case "Coding":
-                                    appCard.Location = new Point(0, groupCoding.Controls.Count * (Program.DPI_PREFERENCE / 3));
+                                    appCard.Location = new Point(0, groupCoding.Controls.Count * (Program.DPI_PREFERENCE / 6));
                                     groupCoding.Controls.Add(appCard);
                                     break;
                                 case "GraphicsSound":
-                                    appCard.Location = new Point(0, groupSoundVideo.Controls.Count * (Program.DPI_PREFERENCE / 3));
+                                    appCard.Location = new Point(0, groupSoundVideo.Controls.Count * (Program.DPI_PREFERENCE / 6));
                                     groupSoundVideo.Controls.Add(appCard);
                                     break;
                                 default:
@@ -2224,7 +2224,7 @@ namespace Optimizer {
                     }
                 }
 
-                appCard.Location = new Point(0, panelUwp.Controls.Count * (Program.DPI_PREFERENCE / 3));
+                appCard.Location = new Point(0, panelUwp.Controls.Count * (Program.DPI_PREFERENCE / 6));
                 panelUwp.Controls.Add(appCard);
             }
 
@@ -3604,6 +3604,7 @@ namespace Optimizer {
                 appCard.appTitle.Script = script;
                 appCard.appTitle.Click += new EventHandler(scriptsAppCardTitleClick); // Change to scriptsAppCardTitleClick
                 appCard.appTitle.MouseHover += new EventHandler(scriptsAppCardTitleClick);
+                appCard.appTitle.Cursor = Cursors.Hand;
                 scriptsPanel.Controls.Add(appCard);
             }
         }
