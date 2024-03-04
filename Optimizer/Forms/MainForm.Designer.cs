@@ -2251,6 +2251,7 @@ namespace Optimizer
             this.runScripts.TabIndex = 92;
             this.runScripts.Text = "Run Scripts";
             this.runScripts.UseVisualStyleBackColor = false;
+            this.runScripts.Click += new System.EventHandler(this.runScripts_Click);
             // 
             // scriptsTextPanel
             // 

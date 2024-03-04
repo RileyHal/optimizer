@@ -4282,5 +4282,17 @@ namespace Optimizer {
         {
 
         }
+
+        private void runScripts_Click(object sender, EventArgs e)
+        {
+            foreach (Control c in Utilities.GetSelfAndChildrenRecursive(scriptsPanel))
+            {
+                if (c is MoonCheck && ((MoonCheck)c).Checked)
+                {
+                    MoonCheck check = (MoonCheck)c;
+                    MessageBox.Show(check.Script.Path);
+                }
+            }
+        }
     }
 }
