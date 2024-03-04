@@ -3587,6 +3587,18 @@ namespace Optimizer {
             HideBackupConfirm();
         }
 
+        private void scriptsButtonClick(object sender, EventArgs e)
+        {
+            if (moonCheck1.Checked)
+            {
+                MessageBox.Show("Checkbox is checked");
+            } else
+            {
+                MessageBox.Show("Checkbox is not checked");
+            }
+            
+        }
+
         private void button13_Click(object sender, EventArgs e) {
             if (!string.IsNullOrEmpty(txtBackupTitle.Text.Trim())) {
                 HideBackupConfirm();
