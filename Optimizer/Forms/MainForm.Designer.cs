@@ -2225,6 +2225,7 @@ namespace Optimizer
             this.scriptsTab.TabIndex = 11;
             this.scriptsTab.Text = "Scripts";
             this.scriptsTab.Click += new System.EventHandler(this.scriptsTab_Click);
+            this.Load += new System.EventHandler(this.showScripts);
             // 
             // scriptsTitleLabel
             // 
