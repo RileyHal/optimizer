@@ -319,8 +319,7 @@
 	"virtualAdapters": "Virtual Adapters",
 	"keyboards": "Keyboards",
 	"pointings": "Pointing Devices",
-	"performanceTip": "Collection of internal Windows settings to optimize performance.
-Completely safe to apply.
+	"performanceTip": "Collection of internal Windows settings to optimize performance. Completely safe to apply.
 
 - Reduces waiting time before killing unresponsive processes.
 - Decreases menu show delay time.
@@ -328,32 +327,22 @@ Completely safe to apply.
 - Disables shake-to-minimize feature
 - Always shows file extensions
 - Shows hidden files",
-	"networkTip": "Windows implements a network throttling mechanism that will restrict
-network traffic when running multimedia apps. It can also reduce network's
-performance when playing online games.",
+	"networkTip": "Windows implements a network throttling mechanism that will restrict network traffic when running multimedia apps. It can also reduce network's performance when playing online games.",
 	"defenderTip": "Windows Defender is the built-in antivirus in Windows systems.",
-	"smartScreenTip": "SmartScreen automatically scans files, downloads and websites, blocking
-already-known dangerous content and warns you before running them.",
-	"systemRestoreTip": "System Restore is a feature that allows to revert Windows' state
-to a previous one to recover from malfunctions or other problems.",
+	"smartScreenTip": "SmartScreen automatically scans files, downloads and websites, blocking already-known dangerous content and warns you before running them.",
+	"systemRestoreTip": "System Restore is a feature that allows to revert Windows' state to a previous one to recover from malfunctions or other problems.",
 	"reportingTip": "Error Reporting collects application crashes and errors and send them to Microsoft.",
-	"telemetryTasksTip": "Telemetry services periodically sends usage and performance data to Microsoft,
-for future improvement.",
-	"officeTelemetryTip": "Office telemetry periodically sends usage and
-performance data to Microsoft, for future improvement.",
+	"telemetryTasksTip": "Telemetry services periodically sends usage and performance data to Microsoft, for future improvement.",
+	"officeTelemetryTip": "Office telemetry periodically sends usage and performance data to Microsoft, for future improvement.",
 	"ffTelemetryTip": "Disables Mozilla Firefox telemetry and data reporting services.",
 	"vsTip": "Disables Visual Studio telemetry and feedback features, including SQM client.",
 	"chromeTelemetryTip": "Disables Google Chrome telemetry and software reporting tool (famously known to cause high CPU usage).",
 	"printTip": "Print service is responsible for detecting, installing and utilizing printers.",
 	"faxTip": "Fax service is responsible for sending and receiving faxes.",
 	"mediaSharingTip": "Media Player Sharing provides home media sharing for Windows Media Player.",
-	"stickyTip": "Sticky Keys is an accessibility feature to help Windows users with
-physical disabilities reducing the sort of movement associated with 
-repetitive strain injury.",
-	"homegroupTip": "HomeGroup is a feature which allows to share files
-on a home network using Windows Explorer.",
-	"superfetchTip": "Superfetch preloads commonly used apps to RAM, causing high disk usage,
-especially on HDDs.",
+	"stickyTip": "Sticky Keys is an accessibility feature to help Windows users with physical disabilities reducing the sort of movement associated with  repetitive strain injury.",
+	"homegroupTip": "HomeGroup is a feature which allows to share files on a home network using Windows Explorer.",
+	"superfetchTip": "Superfetch preloads commonly used apps to RAM, causing high disk usage, especially on HDDs.",
 	"compatTip": "Compatibility Assistant service detects known compatibility issues in older programs.",
 	"disableOneDriveTip": "Disables OneDrive cloud-storage integration.",
 	"oldMixerTip": "Restores the classic volume mixer control panel.",
@@ -373,15 +362,10 @@ especially on HDDs.",
 - Text suggestions
 - Spell-check",
 	"xboxTip": "Xbox Live services offer streaming, recording and social features for Xbox games.",
-	"actionTip": "Notification Center is a central place for notifications and quick action tiles,
-like Wi-Fi, Bluetooth, etc.",
-	"autoUpdatesTip": "Disables automatic downloading and installation of Windows updates.
-Instead, there is a notification when new updates are available.
-It also disables Delivery Optimization service.",
-	"driversTip": "Useful when Windows Update constantly replaces a properly
-working driver with a faulty one.",
-	"telemetryServicesTip": "Telemetry services track and log usage data sending feedback
-for analysis to Microsoft.",
+	"actionTip": "Notification Center is a central place for notifications and quick action tiles, like Wi-Fi, Bluetooth, etc.",
+	"autoUpdatesTip": "Disables automatic downloading and installation of Windows updates. Instead, there is a notification when new updates are available. It also disables Delivery Optimization service.",
+	"driversTip": "Useful when Windows Update constantly replaces a properly working driver with a faulty one.",
+	"telemetryServicesTip": "Telemetry services track and log usage data sending feedback for analysis to Microsoft.",
 	"privacyTip": "Extra privacy tweaks disabling the following:
 
 - Biometrics
@@ -389,22 +373,16 @@ for analysis to Microsoft.",
 - Share apps across devices
 - Text logger
 - Diagnostics",
-	"ccTip": "Cloud Clipboard shares clipboard data across your devices.
-It allows to copy on one device and paste on another.
-Requires Microsoft account sign-in.",
+	"ccTip": "Cloud Clipboard shares clipboard data across your devices. It allows to copy on one device and paste on another. Requires Microsoft account sign-in.",
 	"cortanaTip": "Cortana is a virtual AI-based assistant.
 
 - Disables Cortana.
 - Disables web search in Start Menu
 - Prevents from keeping search history",
-	"sensorTip": "Services that manage sensors' functionality,
-like auto-rotation, auto-brightness, etc.
-Useful only for tablets or devices with touch-screen.",
+	"sensorTip": "Services that manage sensors' functionality, like auto-rotation, auto-brightness, etc. Useful only for tablets or devices with touch-screen.",
 	"castTip": "Removes right-click to share media content to Miracast devices.",
 	"gameBarTip": "Game Bar is a quick-access menu for Xbox gaming services.",
-	"insiderTip": "Windows Insider program allows you to test out latest features
-before they are released to public.
-It's considered an unnecessary service for users who don't wish to participate.",
+	"insiderTip": "Windows Insider program allows you to test out latest features before they are released to public. It's considered an unnecessary service for users who don't wish to participate.",
 	"storeUpdatesSw": "Disable Microsoft Store Updates",
 	"storeUpdatesTip": "Disables Microsoft Store automatic updates functionality.",
 	"tpmTip": "Bypasses Secure Boot and TPM 2.0 requirements, allowing the upgrading to Windows 11.",
@@ -425,17 +403,14 @@ It's considered an unnecessary service for users who don't wish to participate."
 	"hibernateTip": "Disables Windows hibernate feature.",
 	"smb1Sw": "Disable SMBv1 Protocol",
 	"smb2Sw": "Disable SMBv2 Protocol",
-	"smbTip": "SMB{v} protocol is responsible for file-sharing between Windows computers.
-It has been replaced with SMBv3, which is more secure.",
+	"smbTip": "SMB{v} protocol is responsible for file-sharing between Windows computers. It has been replaced with SMBv3, which is more secure.",
 	"ntfsStampSw": "Disable NTFS Timestamp",
-	"ntfsStampTip": "Indicates the file's last time accessed stamp.
-Disabling it can reduce I/O operations on the disks.",
+	"ntfsStampTip": "Indicates the file's last time accessed stamp. Disabling it can reduce I/O operations on the disks.",
 	"autoStartToggle": "Start with Windows",
 	"nvidiaTelemetrySw": "Disable NVIDIA Telemetry",
 	"dnsTitle": "Rapidly change DNS server",
 	"vbsSw": "Disable Virtualization Based Security",
-	"vbsTip": "Kernel feature that prevents malicious drivers injection into processes.
-It has negative effect on performance.",
+	"vbsTip": "Kernel feature that prevents malicious drivers injection into processes. It has negative effect on performance.",
 	"winSearchSw": "Disable Search",
 	"winSearchTip": "Disables Windows search service.",
 	"btnRestoreUwp": "Restore all UWP",
