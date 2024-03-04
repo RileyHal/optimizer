@@ -92,6 +92,13 @@ namespace Optimizer {
                 return;
             }
 
+            //Check to see if scripts folder exists, if not then create one.
+            string scriptPath = Path.Combine(Directory.GetCurrentDirectory(), "Scripts");
+            if (!Directory.Exists(scriptPath))
+            {
+                Directory.CreateDirectory(scriptPath);
+            }
+
             CoreHelper.Deploy();
             FontHelper.LoadFont();
 

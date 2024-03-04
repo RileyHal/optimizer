@@ -3589,14 +3589,47 @@ namespace Optimizer {
 
         private void scriptsButtonClick(object sender, EventArgs e)
         {
-            if (moonCheck1.Checked)
+            scriptsPanel.Controls.Clear();
+            List<Script> scripts = DirectoryConverter.ConvertFilesToScripts();
+
+            foreach (Script script in scripts)
             {
-                MessageBox.Show("Checkbox is checked");
-            } else
-            {
-                MessageBox.Show("Checkbox is not checked");
+                AppCard appCard = new AppCard();
+                appCard.AutoSize = true;
+                appCard.Anchor = AnchorStyles.None;
+                appCard.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+                appCard.appTitle.Text = script.Name;
+                appCard.appImage.SizeMode = PictureBoxSizeMode.Zoom;
+                appCard.Tag = script; // Store the Script object in the Tag property
+                appCard.Location = new Point(0, scriptsPanel.Controls.Count * (Program.DPI_PREFERENCE / 6));
+                appCard.Click += new System.EventHandler(this.scriptsAppCardClick);
+                scriptsPanel.Controls.Add(appCard);
             }
-            
+        }
+
+        private void scriptsAppCardClick(object sender, EventArgs e)
+        {
+            AppCard clickedCard = sender as AppCard;
+            if (clickedCard != null)
+            {
+                Script script = clickedCard.Tag as Script;
+                if (script != null)
+                {
+                    setScriptsTextPanel(File.ReadAllText(script.Path));
+                }
+            }
+        }
+
+        private void setScriptsTextPanel(string text)
+        {
+            Label textLabel = new Label();
+            textLabel.AutoSize = true;
+            textLabel.Location = new System.Drawing.Point(0, 0);
+            textLabel.Name = "scriptsLabel";
+            textLabel.Size = new System.Drawing.Size(45, 19);
+            textLabel.TabIndex = 1;
+            textLabel.Text = text;
+            scriptsTextPanel.Controls.Add(textLabel);
         }
 
         private void button13_Click(object sender, EventArgs e) {

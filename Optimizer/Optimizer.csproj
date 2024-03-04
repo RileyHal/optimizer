@@ -219,6 +219,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ScriptsHelper.cs" />
     <Compile Include="SilentOps.cs" />
     <Compile Include="Forms\SplashForm.cs">
       <SubType>Form</SubType>

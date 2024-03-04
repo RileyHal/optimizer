@@ -147,8 +147,8 @@ namespace Optimizer
             this.chkOnlyRemovable = new Optimizer.MoonCheck();
             this.chkSelectAllModernApps = new Optimizer.MoonCheck();
             this.scriptsTab = new System.Windows.Forms.TabPage();
+            this.scriptsPanel = new System.Windows.Forms.Panel();
             this.scriptsButton = new System.Windows.Forms.Button();
-            this.moonCheck1 = new Optimizer.MoonCheck();
             this.startupTab = new System.Windows.Forms.TabPage();
             this.cancelBackup = new System.Windows.Forms.Button();
             this.doBackup = new System.Windows.Forms.Button();
@@ -453,6 +453,8 @@ namespace Optimizer
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.trayExit = new System.Windows.Forms.ToolStripMenuItem();
             this.launcherIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.scriptsTextPanel = new System.Windows.Forms.Panel();
+            this.runScripts = new System.Windows.Forms.Button();
             this.tpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRestartNeeded)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLab)).BeginInit();
@@ -2210,14 +2212,24 @@ namespace Optimizer
             // 
             this.scriptsTab.AutoScroll = true;
             this.scriptsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.scriptsTab.Controls.Add(this.runScripts);
+            this.scriptsTab.Controls.Add(this.scriptsTextPanel);
+            this.scriptsTab.Controls.Add(this.scriptsPanel);
             this.scriptsTab.Controls.Add(this.scriptsButton);
-            this.scriptsTab.Controls.Add(this.moonCheck1);
             this.scriptsTab.Location = new System.Drawing.Point(4, 29);
             this.scriptsTab.Name = "scriptsTab";
             this.scriptsTab.Padding = new System.Windows.Forms.Padding(3);
             this.scriptsTab.Size = new System.Drawing.Size(1273, 608);
             this.scriptsTab.TabIndex = 11;
             this.scriptsTab.Text = "Scripts";
+            // 
+            // scriptsPanel
+            // 
+            this.scriptsPanel.AutoScroll = true;
+            this.scriptsPanel.Location = new System.Drawing.Point(22, 17);
+            this.scriptsPanel.Name = "scriptsPanel";
+            this.scriptsPanel.Size = new System.Drawing.Size(357, 515);
+            this.scriptsPanel.TabIndex = 90;
             // 
             // scriptsButton
             // 
@@ -2227,24 +2239,14 @@ namespace Optimizer
             this.scriptsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.scriptsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.scriptsButton.ForeColor = System.Drawing.Color.White;
-            this.scriptsButton.Location = new System.Drawing.Point(302, 71);
+            this.scriptsButton.Location = new System.Drawing.Point(22, 556);
             this.scriptsButton.Margin = new System.Windows.Forms.Padding(2);
             this.scriptsButton.Name = "scriptsButton";
-            this.scriptsButton.Size = new System.Drawing.Size(185, 31);
+            this.scriptsButton.Size = new System.Drawing.Size(159, 31);
             this.scriptsButton.TabIndex = 89;
-            this.scriptsButton.Text = "Test";
+            this.scriptsButton.Text = "Refresh Scripts";
             this.scriptsButton.UseVisualStyleBackColor = false;
             this.scriptsButton.Click += new System.EventHandler(this.scriptsButtonClick);
-            // 
-            // moonCheck1
-            // 
-            this.moonCheck1.AutoSize = true;
-            this.moonCheck1.Location = new System.Drawing.Point(112, 76);
-            this.moonCheck1.Name = "moonCheck1";
-            this.moonCheck1.Size = new System.Drawing.Size(94, 23);
-            this.moonCheck1.TabIndex = 0;
-            this.moonCheck1.Text = "Run Script";
-            this.moonCheck1.UseVisualStyleBackColor = true;
             // 
             // startupTab
             // 
@@ -6613,6 +6615,29 @@ namespace Optimizer
             this.launcherIcon.Text = "Optimizer";
             this.launcherIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.launcherIcon_MouseDoubleClick);
             // 
+            // scriptsTextPanel
+            // 
+            this.scriptsTextPanel.Location = new System.Drawing.Point(497, 17);
+            this.scriptsTextPanel.Name = "scriptsTextPanel";
+            this.scriptsTextPanel.Size = new System.Drawing.Size(734, 515);
+            this.scriptsTextPanel.TabIndex = 91;
+            // 
+            // runScripts
+            // 
+            this.runScripts.BackColor = System.Drawing.Color.DodgerBlue;
+            this.runScripts.FlatAppearance.BorderSize = 0;
+            this.runScripts.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.runScripts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.runScripts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.runScripts.ForeColor = System.Drawing.Color.White;
+            this.runScripts.Location = new System.Drawing.Point(220, 556);
+            this.runScripts.Margin = new System.Windows.Forms.Padding(2);
+            this.runScripts.Name = "runScripts";
+            this.runScripts.Size = new System.Drawing.Size(159, 31);
+            this.runScripts.TabIndex = 92;
+            this.runScripts.Text = "Run Scripts";
+            this.runScripts.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -6654,7 +6679,6 @@ namespace Optimizer
             this.modernAppsTab.ResumeLayout(false);
             this.modernAppsTab.PerformLayout();
             this.scriptsTab.ResumeLayout(false);
-            this.scriptsTab.PerformLayout();
             this.startupTab.ResumeLayout(false);
             this.startupTab.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -7157,8 +7181,10 @@ namespace Optimizer
         private MoonCheck chkHideSearch;
         private LinkLabel linkLabel7;
         private PictureBox pictureBox7;
-        private MoonCheck moonCheck1;
         private Button scriptsButton;
+        private Panel scriptsPanel;
+        private Button runScripts;
+        private Panel scriptsTextPanel;
     }
 }
 
