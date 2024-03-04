@@ -4,6 +4,7 @@ using System.Windows.Forms;
 
 namespace Optimizer {
     public sealed class MoonCheck : CheckBox {
+        public Script Script;
         public MoonCheck() {
             DoubleBuffered = true;
         }

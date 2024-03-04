@@ -3587,7 +3587,7 @@ namespace Optimizer {
             HideBackupConfirm();
         }
 
-        private void scriptsButtonClick(object sender, EventArgs e)
+        private void showScripts(object sender, EventArgs e)
         {
             scriptsPanel.Controls.Clear();
             List<Script> scripts = DirectoryConverter.ConvertFilesToScripts();
@@ -3600,36 +3600,49 @@ namespace Optimizer {
                 appCard.Anchor = AnchorStyles.Top | AnchorStyles.Left;
                 appCard.appTitle.Text = script.Name;
                 appCard.appImage.SizeMode = PictureBoxSizeMode.Zoom;
-                appCard.Tag = script; // Store the Script object in the Tag property
                 appCard.Location = new Point(0, scriptsPanel.Controls.Count * (Program.DPI_PREFERENCE / 6));
-                appCard.Click += new System.EventHandler(this.scriptsAppCardClick);
+                appCard.appTitle.Script = script;
+                appCard.appTitle.Click += new EventHandler(scriptsAppCardTitleClick); // Change to scriptsAppCardTitleClick
+                appCard.appTitle.MouseHover += new EventHandler(scriptsAppCardTitleClick);
                 scriptsPanel.Controls.Add(appCard);
             }
         }
 
-        private void scriptsAppCardClick(object sender, EventArgs e)
+        private void scriptsAppCardTitleClick(object sender, EventArgs e)
         {
-            AppCard clickedCard = sender as AppCard;
-            if (clickedCard != null)
-            {
-                Script script = clickedCard.Tag as Script;
-                if (script != null)
-                {
-                    setScriptsTextPanel(File.ReadAllText(script.Path));
-                }
-            }
+            // Extract the script property from the sender object
+            MoonCheck clickedCard = (MoonCheck)sender;
+            Script script = clickedCard.Script;
+
+            // Show the script property in the MessageBox
+            //MessageBox.Show(script.Name, "Script Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            setScriptsTextPanel(script.Name, File.ReadAllText(script.Path));
+
         }
 
-        private void setScriptsTextPanel(string text)
+        private void setScriptsTextPanel(string title, string text)
         {
-            Label textLabel = new Label();
-            textLabel.AutoSize = true;
-            textLabel.Location = new System.Drawing.Point(0, 0);
-            textLabel.Name = "scriptsLabel";
-            textLabel.Size = new System.Drawing.Size(45, 19);
-            textLabel.TabIndex = 1;
-            textLabel.Text = text;
-            scriptsTextPanel.Controls.Add(textLabel);
+            //If Label DNE, Create it.
+            scriptsTitleLabel.Text = title;
+            if (scriptsTextPanel.Controls.Count == 0)
+            {
+                Label textLabel = new Label();
+                textLabel.AutoSize = true;
+                textLabel.Location = new System.Drawing.Point(0, 0);
+                textLabel.Name = "scriptsLabel";
+                textLabel.Size = new System.Drawing.Size(45, 19);
+                textLabel.TabIndex = 1;
+                textLabel.Text = text;
+                scriptsTextPanel.Controls.Add(textLabel);
+            } else
+            {
+                foreach (Control control in scriptsTextPanel.Controls)
+                {
+                    control.Text = text;
+                }
+            }
+            
         }
 
         private void button13_Click(object sender, EventArgs e) {
@@ -4257,6 +4270,16 @@ namespace Optimizer {
 
         private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             Process.Start(_faqSectionLink);
+        }
+
+        private void scriptsButtonClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void scriptsTab_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
