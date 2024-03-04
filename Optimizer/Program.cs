@@ -175,10 +175,10 @@ namespace Optimizer {
                     RestartInNormalMode();
                 }*/
 
-                if (arg == "/silentenabledefender") {
+                /*if (arg == "/silentenabledefender") {
                     EnableDefenderInSafeMode();
                     RestartInNormalMode();
-                }
+                }*/
 
                 // disables Defender in SAFE MODE (for Windows 10 1903+ / works in Windows 11 as well)
                 /*if (arg == "/disabledefender") {
@@ -312,7 +312,8 @@ namespace Optimizer {
             File.Delete("DisableDefenderSafeMode.bat");
         }*/
 
-        private static void EnableDefenderInSafeMode() {
+        /*private static void EnableDefenderInSafeMode()
+        {
             File.WriteAllText("EnableDefenderSafeMode.bat", Properties.Resources.EnableDefenderSafeMode1903Plus);
 
             Utilities.RunBatchFile("EnableDefenderSafeMode.bat");
@@ -321,7 +322,7 @@ namespace Optimizer {
             Thread.Sleep(1000);
 
             File.Delete("EnableDefenderSafeMode.bat");
-        }
+        }*/
 
         internal static void SetRunOnceDisableDefender() {
             // set RunOnce instruction
