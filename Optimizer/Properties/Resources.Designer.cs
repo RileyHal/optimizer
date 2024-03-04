@@ -89,21 +89,22 @@ namespace Optimizer.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///	&quot;subSystem&quot;: &quot;نظام&quot;,
-        ///	&quot;subPrivacy&quot;: &quot;خصوصية&quot;,
+        ///	&quot;subSystem&quot;: &quot;النظام&quot;,
+        ///	&quot;subPrivacy&quot;: &quot;الخصوصية&quot;,
         ///	&quot;subGaming&quot;: &quot;الألعاب&quot;,
-        ///	&quot;subTouch&quot;: &quot;يلمس&quot;,
-        ///	&quot;subTaskbar&quot;: &quot;ريط المهام&quot;,
-        ///	&quot;subExtras&quot;: &quot;إضافات&quot;,
+        ///	&quot;subTouch&quot;: &quot;اللمس&quot;,
+        ///	&quot;subTaskbar&quot;: &quot;شريط المهام&quot;,
+        ///	&quot;subExtras&quot;: &quot;الإضافات&quot;,
         ///	&quot;btnAbout&quot;: &quot;حسنا&quot;,
         ///	&quot;restartButton&quot;: &quot;إعادة التشغيل الآن&quot;,
         ///	&quot;restartButton8&quot;: &quot;إعادة التشغيل الآن&quot;,
         ///	&quot;restartButton10&quot;: &quot;إعادة التشغيل الآن&quot;,
-        ///	&quot;restartAndApply&quot;: &quot;إعادة التشغيل لتطبيق التغييرات&quot;,
-        ///	&quot;btnFind&quot;: &quot;يجد&quot;,
-        ///	&quot;btnKill&quot;: &quot;قتل&quot;,
-        ///	&quot;trayUnlocker&quot;: &quot;مقابض الملفات&quot;,
-        ///	&quot;onedriveM&quot;: &quot;هل أنت متأكد من أنك تريد إزالة تثبيت OneDrive؟ يؤدي هذا إلى حذف  [rest of string was truncated]&quot;;.
+        ///	&quot;btnFind&quot;: &quot;البحث&quot;,
+        ///	&quot;btnKill&quot;: &quot;إنهاء&quot;,
+        ///	&quot;trayUnlocker&quot;: &quot;مفاتيح الملفات&quot;,
+        ///	&quot;restartAndApply&quot;: &quot;لتطبيق الإعدادات يجب إعادة التشغيل&quot;,
+        ///	&quot;txtVersion&quot;: &quot;الإصدار: {VN}&quot;,
+        ///	&quot;txtBitness&quot;: &quot;أنت تعمل مع { [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string AR {
             get {
@@ -309,21 +310,6 @@ namespace Optimizer.Properties {
         internal static string DisableClassicPhotoViewer {
             get {
                 return ResourceManager.GetString("DisableClassicPhotoViewer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to rem USE AT OWN RISK AS IS WITHOUT WARRANTY OF ANY KIND !!!!!
-        ///
-        ///rem https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-disableantispyware
-        ///rem &quot;DisableAntiSpyware&quot; is discontinued and will be ignored on client devices, as of the August 2020 (version 4.18.2007.8) update to Microsoft Defender Antivirus.
-        ///
-        ///rem Disable Tamper Protection First !!!!!
-        ///rem https://www.tenforums.com/tutorials/123792-turn-off-tamper-protection-windows-defender-antivirus.ht [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string DisableDefenderSafeMode1903Plus {
-            get {
-                return ResourceManager.GetString("DisableDefenderSafeMode1903Plus", resourceCulture);
             }
         }
         

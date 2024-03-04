@@ -170,10 +170,10 @@ namespace Optimizer {
                 }
 
                 // return from safe-mode automatically
-                if (arg == "/silentdisabledefender") {
+                /*if (arg == "/silentdisabledefender") {
                     DisableDefenderInSafeMode();
                     RestartInNormalMode();
-                }
+                }*/
 
                 if (arg == "/silentenabledefender") {
                     EnableDefenderInSafeMode();
@@ -181,13 +181,13 @@ namespace Optimizer {
                 }
 
                 // disables Defender in SAFE MODE (for Windows 10 1903+ / works in Windows 11 as well)
-                if (arg == "/disabledefender") {
+                /*if (arg == "/disabledefender") {
                     DisableDefenderInSafeMode();
 
                     MessageBox.Show("Windows Defender has been completely disabled successfully.", "Optimizer", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Environment.Exit(0);
                     return;
-                }
+                }*/
 
 
                 // other options for disabling specific tools
@@ -301,7 +301,7 @@ namespace Optimizer {
             Environment.Exit(0);
         }
 
-        private static void DisableDefenderInSafeMode() {
+        /*private static void DisableDefenderInSafeMode() {
             File.WriteAllText("DisableDefenderSafeMode.bat", Properties.Resources.DisableDefenderSafeMode1903Plus);
 
             Utilities.RunBatchFile("DisableDefenderSafeMode.bat");
@@ -310,7 +310,7 @@ namespace Optimizer {
             Thread.Sleep(1000);
 
             File.Delete("DisableDefenderSafeMode.bat");
-        }
+        }*/
 
         private static void EnableDefenderInSafeMode() {
             File.WriteAllText("EnableDefenderSafeMode.bat", Properties.Resources.EnableDefenderSafeMode1903Plus);

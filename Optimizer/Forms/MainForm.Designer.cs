@@ -76,7 +76,7 @@ namespace Optimizer
             this.smartScreenSw = new Optimizer.ToggleCard();
             this.networkSw = new Optimizer.ToggleCard();
             this.telemetryTasksSw = new Optimizer.ToggleCard();
-            this.defenderSw = new Optimizer.ToggleCard();
+            //this.defenderSw = new Optimizer.ToggleCard();
             this.homegroupSw = new Optimizer.ToggleCard();
             this.stickySw = new Optimizer.ToggleCard();
             this.compatSw = new Optimizer.ToggleCard();
@@ -135,7 +135,7 @@ namespace Optimizer
             this.label21 = new System.Windows.Forms.Label();
             this.disableOneDriveSw = new Optimizer.ToggleCard();
             this.advancedTab = new System.Windows.Forms.TabPage();
-            this.btnRestartDisableDefender = new System.Windows.Forms.Button();
+            //this.btnRestartDisableDefender = new System.Windows.Forms.Button();
             this.btnRestart = new System.Windows.Forms.Button();
             this.btnRestartSafe = new System.Windows.Forms.Button();
             this.loginVerboseSw = new Optimizer.ToggleCard();
@@ -739,7 +739,7 @@ namespace Optimizer
             this.universalTab.Controls.Add(this.smartScreenSw);
             this.universalTab.Controls.Add(this.networkSw);
             this.universalTab.Controls.Add(this.telemetryTasksSw);
-            this.universalTab.Controls.Add(this.defenderSw);
+            //this.universalTab.Controls.Add(this.defenderSw);
             this.universalTab.Controls.Add(this.homegroupSw);
             this.universalTab.Controls.Add(this.stickySw);
             this.universalTab.Controls.Add(this.compatSw);
@@ -1075,7 +1075,7 @@ namespace Optimizer
             // 
             // defenderSw
             // 
-            this.defenderSw.AccessibleName = "Disable Windows Defender";
+            /*this.defenderSw.AccessibleName = "Disable Windows Defender";
             this.defenderSw.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.defenderSw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.defenderSw.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1087,7 +1087,7 @@ namespace Optimizer
             this.defenderSw.Size = new System.Drawing.Size(621, 36);
             this.defenderSw.TabIndex = 210;
             this.defenderSw.Tag = "themeable";
-            this.defenderSw.ToggleChecked = false;
+            this.defenderSw.ToggleChecked = false;*/
             // 
             // homegroupSw
             // 
@@ -2002,7 +2002,7 @@ namespace Optimizer
             // 
             this.advancedTab.AutoScroll = true;
             this.advancedTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.advancedTab.Controls.Add(this.btnRestartDisableDefender);
+            //this.advancedTab.Controls.Add(this.btnRestartDisableDefender);
             this.advancedTab.Controls.Add(this.btnRestart);
             this.advancedTab.Controls.Add(this.btnRestartSafe);
             this.advancedTab.Controls.Add(this.loginVerboseSw);
@@ -2016,7 +2016,7 @@ namespace Optimizer
             // 
             // btnRestartDisableDefender
             // 
-            this.btnRestartDisableDefender.BackColor = System.Drawing.Color.DodgerBlue;
+            /*this.btnRestartDisableDefender.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnRestartDisableDefender.FlatAppearance.BorderSize = 0;
             this.btnRestartDisableDefender.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
             this.btnRestartDisableDefender.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
@@ -2028,7 +2028,7 @@ namespace Optimizer
             this.btnRestartDisableDefender.TabIndex = 88;
             this.btnRestartDisableDefender.Text = "Restart && Disable Defender";
             this.btnRestartDisableDefender.UseVisualStyleBackColor = false;
-            this.btnRestartDisableDefender.Click += new System.EventHandler(this.btnRestartDisableDefender_Click);
+            this.btnRestartDisableDefender.Click += new System.EventHandler(this.btnRestartDisableDefender_Click);*/
             // 
             // btnRestart
             // 
@@ -6895,7 +6895,7 @@ namespace Optimizer
         private System.Windows.Forms.Button btnOpenNetwork;
         private System.Windows.Forms.Button flushCacheB;
         private System.Windows.Forms.Button btnRestoreUwp;
-        private System.Windows.Forms.Button btnRestartDisableDefender;
+        //private System.Windows.Forms.Button btnRestartDisableDefender;
         private System.Windows.Forms.Button btnRestart;
         private System.Windows.Forms.Button btnRestartSafe;
         private ToggleCard classicPhotoViewerSw;
@@ -6918,7 +6918,7 @@ namespace Optimizer
         private ToggleCard smartScreenSw;
         private ToggleCard networkSw;
         private ToggleCard telemetryTasksSw;
-        private ToggleCard defenderSw;
+        //private ToggleCard defenderSw;
         private ToggleCard homegroupSw;
         private ToggleCard stickySw;
         private ToggleCard compatSw;

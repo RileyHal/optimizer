@@ -210,7 +210,7 @@ namespace Optimizer {
             printSw.ToggleClicked += new EventHandler(toggleSwitch5_Click);
             systemRestoreSw.ToggleClicked += new EventHandler(toggleSwitch4_Click);
             performanceSw.ToggleClicked += new EventHandler(toggleSwitch1_Click);
-            defenderSw.ToggleClicked += new EventHandler(toggleSwitch3_Click);
+            /*defenderSw.ToggleClicked += new EventHandler(toggleSwitch3_Click);*/
             networkSw.ToggleClicked += new EventHandler(toggleSwitch2_Click);
             spellSw.ToggleClicked += new EventHandler(toggleSwitch28_Click);
             inkSw.ToggleClicked += new EventHandler(toggleSwitch29_Click);
@@ -536,7 +536,7 @@ namespace Optimizer {
             try {
                 performanceSw.Label.Tag = OptionsHelper.TranslationList["performanceTip"].ToString();
                 networkSw.Label.Tag = OptionsHelper.TranslationList["networkTip"].ToString();
-                defenderSw.Label.Tag = OptionsHelper.TranslationList["defenderTip"].ToString();
+                //defenderSw.Label.Tag = OptionsHelper.TranslationList["defenderTip"].ToString();
                 smartScreenSw.Label.Tag = OptionsHelper.TranslationList["smartScreenTip"].ToString();
                 systemRestoreSw.Label.Tag = OptionsHelper.TranslationList["systemRestoreTip"].ToString();
                 reportingSw.Label.Tag = OptionsHelper.TranslationList["reportingTip"].ToString();
@@ -812,7 +812,7 @@ namespace Optimizer {
                 LoadWindows10ToggleStates();
 
                 tabCollection.TabPages.Remove(windows8Tab);
-                defenderSw.Visible = false;
+                //defenderSw.Visible = false;
                 vbsSw.Visible = false;
                 oldMixerSw.Visible = true;
                 this.Controls.Remove(panelWin11Tweaks);
@@ -834,7 +834,7 @@ namespace Optimizer {
 
                 tabCollection.TabPages.Remove(windows8Tab);
                 windows10Tab.Text = "Windows 11";
-                defenderSw.Visible = false;
+                //defenderSw.Visible = false;
                 vbsSw.Visible = true;
                 panelWin11Tweaks.Visible = true;
                 oldMixerSw.Visible = false;
@@ -2049,7 +2049,7 @@ namespace Optimizer {
             chkAllTrayIcons.Enabled = !OptionsHelper.CurrentOptions.EnablePerformanceTweaks;
             chkMenuDelays.Enabled = !OptionsHelper.CurrentOptions.EnablePerformanceTweaks;
             networkSw.ToggleChecked = OptionsHelper.CurrentOptions.DisableNetworkThrottling;
-            defenderSw.ToggleChecked = OptionsHelper.CurrentOptions.DisableWindowsDefender;
+            //defenderSw.ToggleChecked = OptionsHelper.CurrentOptions.DisableWindowsDefender;
             systemRestoreSw.ToggleChecked = OptionsHelper.CurrentOptions.DisableSystemRestore;
             printSw.ToggleChecked = OptionsHelper.CurrentOptions.DisablePrintService;
             mediaSharingSw.ToggleChecked = OptionsHelper.CurrentOptions.DisableMediaPlayerSharing;
@@ -2844,7 +2844,7 @@ namespace Optimizer {
             OptionsHelper.CurrentOptions.DisableNetworkThrottling = networkSw.ToggleChecked;
         }
 
-        private void toggleSwitch3_Click(object sender, EventArgs e) {
+        /*private void toggleSwitch3_Click(object sender, EventArgs e) {
             if (defenderSw.ToggleChecked) {
                 OptimizeHelper.DisableDefender();
             }
@@ -2852,7 +2852,7 @@ namespace Optimizer {
                 OptimizeHelper.EnableDefender();
             }
             OptionsHelper.CurrentOptions.DisableWindowsDefender = defenderSw.ToggleChecked;
-        }
+        }*/
 
         private void toggleSwitch4_Click(object sender, EventArgs e) {
             if (systemRestoreSw.ToggleChecked) {
@@ -4121,10 +4121,10 @@ namespace Optimizer {
             Program.RestartInNormalMode();
         }
 
-        private void btnRestartDisableDefender_Click(object sender, EventArgs e) {
+        /*private void btnRestartDisableDefender_Click(object sender, EventArgs e) {
             Microsoft.Win32.Registry.SetValue(@"HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnce", "*OptimizerDisableDefender", Assembly.GetExecutingAssembly().Location + " /silentdisabledefender", Microsoft.Win32.RegistryValueKind.String);
             Program.RestartInSafeMode();
-        }
+        }*/
 
         private void ConfirmAndReboot() {
             if (MessageBox.Show(_uwpRestoreMessage, "Optimizer", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
