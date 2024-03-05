@@ -118,7 +118,7 @@ namespace Optimizer {
         }
 
         private void l2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-            Process.Start("https://github.com/hellzerg/optimizer");
+            Process.Start("https://github.com/RileyHal/optimizer");
         }
     }
 }

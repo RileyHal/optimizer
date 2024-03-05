@@ -47,20 +47,20 @@ namespace Optimizer {
         DesktopTypePosition _desktopItemPosition = DesktopTypePosition.Top;
 
         public List<AppInfo> AppsFromFeed = new List<AppInfo>();
-        readonly string _feedLink = "https://raw.githubusercontent.com/hellzerg/optimizer/master/feed.json";
-        readonly string _feedImages = "https://raw.githubusercontent.com/hellzerg/optimizer/master/images/feed.zip";
+        readonly string _feedLink = "https://raw.githubusercontent.com/RileyHal/optimizer/master/feed.json";
+        readonly string _feedImages = "https://raw.githubusercontent.com/RileyHal/optimizer/master/images/feed.zip";
 
         readonly string _licenseLink = "https://www.gnu.org/licenses/gpl-3.0.en.html";
         readonly string _discordLink = "https://discord.gg/rZh8BhmmQv";
-        readonly string _githubProjectLink = "https://github.com/hellzerg/optimizer";
+        readonly string _githubProjectLink = "https://github.com/RileyHal/optimizer";
         readonly string _paypalSupportLink = "https://www.paypal.com/paypalme/supportoptimizer";
 
-        readonly string _latestVersionLink = "https://raw.githubusercontent.com/hellzerg/optimizer/master/version.txt";
-        readonly string _changelogRawLink = "https://raw.githubusercontent.com/hellzerg/optimizer/master/CHANGELOG.md";
-        readonly string _faqSectionLink = "https://github.com/hellzerg/optimizer/blob/master/FAQ.md";
+        readonly string _latestVersionLink = "https://raw.githubusercontent.com/RileyHal/optimizer/master/version.txt";
+        readonly string _changelogRawLink = "https://raw.githubusercontent.com/RileyHal/optimizer/master/CHANGELOG.md";
+        readonly string _faqSectionLink = "https://github.com/RileyHal/optimizer/blob/master/FAQ.md";
 
-        readonly string _bugReportLink = "https://github.com/hellzerg/optimizer/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=";
-        readonly string _featureRequestLink = "https://github.com/hellzerg/optimizer/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=";
+        readonly string _bugReportLink = "https://github.com/RileyHal/optimizer/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=";
+        readonly string _featureRequestLink = "https://github.com/RileyHal/optimizer/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=";
 
         string _noNewVersionMessage = "You already have the latest version!";
         string _betaVersionMessage = "You are using an experimental version!";
@@ -108,7 +108,7 @@ namespace Optimizer {
         bool _disablePinger;
 
         private string NewDownloadLink(string latestVersion) {
-            return string.Format("https://github.com/hellzerg/optimizer/releases/download/{0}/Optimizer-{0}.exe", latestVersion);
+            return string.Format("https://github.com/RileyHal/optimizer/releases/download/{0}/Optimizer-{0}.exe", latestVersion);
         }
 
         private void CheckForUpdate(bool silentCheck = false) {
