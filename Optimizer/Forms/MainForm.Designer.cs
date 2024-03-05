@@ -2255,7 +2255,6 @@ namespace Optimizer
             // 
             // scriptsTextPanel
             // 
-            this.scriptsTextPanel.AutoScroll = true;
             this.scriptsTextPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.scriptsTextPanel.Location = new System.Drawing.Point(423, 50);
             this.scriptsTextPanel.Name = "scriptsTextPanel";

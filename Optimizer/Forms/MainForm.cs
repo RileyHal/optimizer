@@ -1914,19 +1914,19 @@ namespace Optimizer {
 
                             switch (x.Group) {
                                 case "SystemTools":
-                                    appCard.Location = new Point(0, groupSystemTools.Controls.Count * (Program.DPI_PREFERENCE / 6));
+                                    appCard.Location = new Point(0, groupSystemTools.Controls.Count * (Program.DPI_PREFERENCE / 3));
                                     groupSystemTools.Controls.Add(appCard);
                                     break;
                                 case "Internet":
-                                    appCard.Location = new Point(0, groupInternet.Controls.Count * (Program.DPI_PREFERENCE / 6));
+                                    appCard.Location = new Point(0, groupInternet.Controls.Count * (Program.DPI_PREFERENCE / 3));
                                     groupInternet.Controls.Add(appCard);
                                     break;
                                 case "Coding":
-                                    appCard.Location = new Point(0, groupCoding.Controls.Count * (Program.DPI_PREFERENCE / 6));
+                                    appCard.Location = new Point(0, groupCoding.Controls.Count * (Program.DPI_PREFERENCE / 3));
                                     groupCoding.Controls.Add(appCard);
                                     break;
                                 case "GraphicsSound":
-                                    appCard.Location = new Point(0, groupSoundVideo.Controls.Count * (Program.DPI_PREFERENCE / 6));
+                                    appCard.Location = new Point(0, groupSoundVideo.Controls.Count * (Program.DPI_PREFERENCE / 3));
                                     groupSoundVideo.Controls.Add(appCard);
                                     break;
                                 default:
@@ -2224,7 +2224,7 @@ namespace Optimizer {
                     }
                 }
 
-                appCard.Location = new Point(0, panelUwp.Controls.Count * (Program.DPI_PREFERENCE / 6));
+                appCard.Location = new Point(0, panelUwp.Controls.Count * (Program.DPI_PREFERENCE / 3));
                 panelUwp.Controls.Add(appCard);
             }
 
@@ -3598,11 +3598,11 @@ namespace Optimizer {
                 appCard.AutoSize = true;
                 appCard.Anchor = AnchorStyles.None;
                 appCard.Anchor = AnchorStyles.Top | AnchorStyles.Left;
-                appCard.appTitle.Text = script.Name;
+                appCard.appTitle.Text = $"{script.Name}.{script.Type}";
                 appCard.appImage.SizeMode = PictureBoxSizeMode.Zoom;
-                appCard.Location = new Point(0, scriptsPanel.Controls.Count * (Program.DPI_PREFERENCE / 6));
+                appCard.Location = new Point(0, scriptsPanel.Controls.Count * (Program.DPI_PREFERENCE / 3));
                 appCard.appTitle.Script = script;
-                appCard.appTitle.Click += new EventHandler(scriptsAppCardTitleClick); // Change to scriptsAppCardTitleClick
+                appCard.appTitle.Click += new EventHandler(scriptsAppCardTitleClick);
                 appCard.appTitle.MouseHover += new EventHandler(scriptsAppCardTitleClick);
                 appCard.appTitle.Cursor = Cursors.Hand;
                 scriptsPanel.Controls.Add(appCard);
@@ -3628,14 +3628,18 @@ namespace Optimizer {
             scriptsTitleLabel.Text = title;
             if (scriptsTextPanel.Controls.Count == 0)
             {
-                Label textLabel = new Label();
-                textLabel.AutoSize = true;
-                textLabel.Location = new System.Drawing.Point(0, 0);
-                textLabel.Name = "scriptsLabel";
-                textLabel.Size = new System.Drawing.Size(45, 19);
-                textLabel.TabIndex = 1;
-                textLabel.Text = text;
-                scriptsTextPanel.Controls.Add(textLabel);
+                TextBox textBox = new TextBox();
+                textBox.AutoSize = true;
+                textBox.Location = new System.Drawing.Point(0, 0);
+                textBox.Name = "scriptsTextBox";
+                textBox.Size = new System.Drawing.Size(scriptsTextPanel.Width, scriptsTextPanel.Height);
+                textBox.TabIndex = 1;
+                textBox.Text = text;
+                textBox.ScrollBars = ScrollBars.Vertical;
+                textBox.Multiline = true;
+                textBox.ReadOnly = true;
+
+                scriptsTextPanel.Controls.Add(textBox);
             } else
             {
                 foreach (Control control in scriptsTextPanel.Controls)
@@ -4273,11 +4277,6 @@ namespace Optimizer {
             Process.Start(_faqSectionLink);
         }
 
-        private void scriptsButtonClick(object sender, EventArgs e)
-        {
-
-        }
-
         private void scriptsTab_Click(object sender, EventArgs e)
         {
 
@@ -4290,7 +4289,22 @@ namespace Optimizer {
                 if (c is MoonCheck && ((MoonCheck)c).Checked)
                 {
                     MoonCheck check = (MoonCheck)c;
-                    MessageBox.Show(check.Script.Path);
+                    Script script = check.Script;
+                    string type = script.Type;
+
+                    switch (type)
+                    {
+                        case "bat":
+                            Process.Start("cmd.exe", $"/k \"{script.Path}\"");
+                            break;
+                        case "ps1":
+                            Process.Start("powershell.exe", $"-NoExit -File \"{script.Path}\"");
+                            break;
+                        case "reg":
+                            Process.Start("regedit.exe", $"/s \"{script.Path}\"");
+                            break;
+
+                    }
                 }
             }
         }
